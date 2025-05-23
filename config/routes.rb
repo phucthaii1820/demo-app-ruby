@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # User authentication routes
   devise_for :users, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",
@@ -9,4 +10,8 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   },
   defaults: { format: :json }
+
+  # Post routes
+  resources :posts
+  get "/my-posts", to: "posts#my_posts"
 end
