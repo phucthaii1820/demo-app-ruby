@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     get :search, on: :collection
   end
   get "/my-posts", to: "posts#my_posts"
+
+  # Category routes
+  resources :categories, only: [ :index ]
 end
