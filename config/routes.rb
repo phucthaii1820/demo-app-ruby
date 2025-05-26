@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   defaults: { format: :json }
 
   # Post routes
-  resources :posts
+  resources :posts do
+    get :search, on: :collection
+  end
   get "/my-posts", to: "posts#my_posts"
 end
