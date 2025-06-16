@@ -52,3 +52,4 @@ gem "jsonapi-serializer"
 gem "jbuilder"
 gem "faker"
 gem "kaminari"
+gem "dotenv-rails", groups: [ :development, :test ]
